@@ -232,6 +232,13 @@ img {
 
 /* Active link */
 
+.active-link {
+  background: var(--white-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 
 /*=============== HOME ===============*/
 .home__img {
@@ -241,10 +248,11 @@ img {
   right: 1.5rem;
 
 }
-.home__img:hover
-{
-  filter:saturate(8);
+
+.home__img:hover {
+  filter: saturate(8);
 }
+
 .home__data {
   padding-top: 5rem;
 }
@@ -547,29 +555,58 @@ img {
   color: var(--black-color);
 
 }
-.footer__copy
-{
+
+.footer__copy {
   margin-top: 5rem;
   text-align: center;
 }
-.footer__copy-link
-{
+
+.footer__copy-link {
   font-size: var(--small-font-size);
   color: var(--text-color-light);
 }
-/*=============== SCROLL UP ===============*/
 
+/*=============== SCROLL UP ===============*/
+.scrollUp {
+  position: fixed;
+  display: flex;
+  padding: .45rem;
+  opacity: 9;
+  z-index: var(--z-tooltip);
+  background-color: var(--container-color);
+  right: 2rem;
+  bottom: -112rem;
+  border-radius: .25rem;
+  transition: 0.6s ease all;
+}
+
+.scroll__icon {
+  color: var(--white-color);
+  font-size: 1.25rem;
+}
+
+.scrollUp:hover {
+  background-color: var(--black-color);
+  opacity: 1;
+}
 
 /* Show Scroll Up*/
-
+.show-scroll {
+  bottom: 5rem;
+}
 
 /*=============== SCROLL BAR ===============*/
 
 
 /*=============== MEDIA QUERIES ===============*/
 /* For small devices */
-
-
+@media screen and (max-width:340px){
+  .container
+  {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+}
 /* For medium devices */
 
 
